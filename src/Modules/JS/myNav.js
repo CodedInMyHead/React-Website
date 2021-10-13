@@ -1,11 +1,15 @@
 import '../CSS/myNav.css';
+import NameFlag from './NameFlag.js';
+import NavLinks from './NavLinks.js';
 
 function MyNav() {
   return (
       <div className="nav">
-          <nameFlag></nameFlag>
-          <navLinks></navLinks>
+        <div class="centerAll">
+          <NameFlag />
+          <NavLinks />
+        </div>
       </div>
   );
 }
-export default MyNav;
+export default MyNav; 

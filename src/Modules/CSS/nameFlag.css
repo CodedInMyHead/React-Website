@@ -1,0 +1,19 @@
+.name {
+    font-size:8vh;
+    display: table;
+}
+.nameFlag {
+    width:50%;
+    display: flex;
+    position: relative;
+}
+.firstName {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right:1vw;
+    padding-left: 3vw;
+}
+.lastName {
+    display: table-cell;
+    vertical-align: middle;
+}

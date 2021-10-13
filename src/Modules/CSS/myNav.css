@@ -1,5 +1,12 @@
 .nav {
     width: 100vw;
-    height:15vh;
-    background-color: aquamarine;
+    height:16vh;
+    background-color: rgb(26, 194, 90);
+}
+.centerAll {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }

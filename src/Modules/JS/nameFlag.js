@@ -2,10 +2,13 @@ import '../CSS/nameFlag.css';
 
 function NameFlag() {
   return (
-      <span className="nameFlag">
-        <span className="firstName">Micha</span>
-        <span className="lastName">Schmitt</span>
-      </span>
+      <div className="nameFlag">
+        <div className="name">
+          <div className="firstName">Micha</div>
+          <div className="lastName">Schmitt</div>
+        </div>
+        
+      </div>
   );
 }
 export default NameFlag;

@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MyNav from './Modules/JS/MyNav.js';
+import StartSite from './Modules/JS/StartSite.js';
 
 ReactDOM.render(
-  <MyNav />,
+  <>
+  
+  <StartSite />
+
+  </>,
   document.getElementById('root')
 );

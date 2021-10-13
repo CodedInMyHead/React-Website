@@ -1,0 +1,25 @@
+.navList {
+    display:flex;
+    justify-content: space-around;
+    height:100%;
+    width:50%;
+}
+.navLinks {
+    display:inline-block;
+}
+.navItem {
+    padding-right:2vw;
+    font-size: 3vh;
+    text-align: center;
+    display: table;
+}
+a {
+    padding:1vh 0;
+    margin:2.5vh 0;
+    border-top:3px solid black;
+    border-bottom:3px solid black;
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+    color:black;
+}
