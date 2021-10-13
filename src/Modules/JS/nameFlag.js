@@ -1,9 +1,11 @@
-import '../CSS/nameFlag.scss';
+import '../CSS/nameFlag.css';
 
-function nameFlag() {
+function NameFlag() {
   return (
-      <>
-      </>
+      <span className="nameFlag">
+        <span className="firstName">Micha</span>
+        <span className="lastName">Schmitt</span>
+      </span>
   );
 }
-export default nameFlag
+export default NameFlag;

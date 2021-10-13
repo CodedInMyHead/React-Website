@@ -1,6 +1,6 @@
-import '../CSS/myNav.scss';
+import '../CSS/myNav.css';
 
-function myNav() {
+function MyNav() {
   return (
       <div className="nav">
           <nameFlag></nameFlag>
@@ -8,4 +8,4 @@ function myNav() {
       </div>
   );
 }
-export default myNav
+export default MyNav;

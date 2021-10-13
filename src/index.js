@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Modules/JS/App';
+import MyNav from './Modules/JS/MyNav.js';
 
 ReactDOM.render(
-  <App />,
+  <MyNav />,
   document.getElementById('root')
 );

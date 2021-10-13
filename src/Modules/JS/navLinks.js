@@ -1,9 +1,9 @@
-import '../CSS/navLinks.scss';
+import '../CSS/navLinks.css';
 
-function navLinks() {
+function NavLinks() {
   return (
       <>
       </>
   );
 }
-export default navLinks
+export default NavLinks;
