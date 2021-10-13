@@ -1,0 +1,16 @@
+.ProjectWrapper {
+    width:80%;
+    margin:0 auto;
+    padding-top:5vh;
+}
+.ProjectRow {
+    display:flex;
+    justify-content: space-around;
+    padding-top:3vh;
+}
+.ProjectElement {
+    flex-direction: row;
+    width: 45%;
+    height: 16vh;
+    background-color: aquamarine;
+}
