@@ -1,36 +1,42 @@
+import { useState } from 'react';
 import '../CSS/TicTacToe.scss';
 
     function Square(props) {
         return (
-            <button className="square">
-            {props.value}
+            <button className="square" 
+            onClick={() => {setSquares('X'); console.log(props.value)}}>
+                {props.value}
             </button>
         );
     }
-    function renderSquare(i) {
-        return <Square value={i} />;
+    function renderSquare(props) {
+        return <Square value={props} />;
     }
+    
 
     function Board() {
+        
+        const [squares , setSquares] = useState(Array(9).fill(""));
+
         const status = 'Next player: X';
 
     return (
     <div>
         <div className="status">{status}</div>
         <div className="board-row">
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
+        {renderSquare(squares[0],)}
+        {renderSquare(squares[1])}
+        {renderSquare(squares[2])}
         </div>
         <div className="board-row">
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
+        {renderSquare(squares[3])}
+        {renderSquare(squares[4])}
+        {renderSquare(squares[5])}
         </div>
         <div className="board-row">
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
+        {renderSquare(squares[6])}
+        {renderSquare(squares[7])}
+        {renderSquare(squares[8])}
         </div>
     </div>
     );
