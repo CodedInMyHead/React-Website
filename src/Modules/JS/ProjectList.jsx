@@ -1,5 +1,5 @@
+import '../CSS/ProjectList.scss';
 
-import '../CSS/ProjectList.css';
 function ProjectList(){
     return(
         <div className="ProjectWrapper">

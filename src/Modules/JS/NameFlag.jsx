@@ -1,4 +1,4 @@
-import '../CSS/nameFlag.css';
+import '../CSS/nameFlag.scss';
 
 function NameFlag() {
   return (

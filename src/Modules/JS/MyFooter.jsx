@@ -1,6 +1,6 @@
 
-import NameFlag from './NameFlag.js';
-import '../CSS/MyFooter.css';
+import NameFlag from './NameFlag.jsx';
+import '../CSS/MyFooter.scss';
 
 function MyFooter(){
     return(

@@ -1,4 +1,4 @@
-import '../CSS/HeaderImg.css';
+import '../CSS/HeaderImg.scss';
 import logo from '../../images/header.jpg';
 
 function HeaderImg() {

@@ -1,5 +1,5 @@
-import MyNav from './MyNav.js';
-import HeaderImg from './HeaderImg.js';
+import MyNav from './MyNav.jsx';
+import HeaderImg from './HeaderImg.jsx';
 
 function StartSite(){
     return(

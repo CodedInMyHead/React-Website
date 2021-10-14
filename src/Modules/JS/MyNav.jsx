@@ -1,6 +1,6 @@
-import '../CSS/myNav.css';
-import NameFlag from './NameFlag.js';
-import NavLinks from './NavLinks.js';
+import '../CSS/myNav.scss';
+import NameFlag from './NameFlag.jsx';
+import NavLinks from './NavLinks.jsx';
 
 function MyNav() {
   return (
