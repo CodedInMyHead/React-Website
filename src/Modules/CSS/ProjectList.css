@@ -11,6 +11,6 @@
 .ProjectElement {
     flex-direction: row;
     width: 45%;
-    height: 16vh;
-    background-color: aquamarine;
+    height: 32vh;
+    border-radius: 18px;
 }

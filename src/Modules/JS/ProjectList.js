@@ -6,29 +6,29 @@ function ProjectList(){
 
             <div className="ProjectRow">
                 <div className="ProjectElement">
-                    <div className="ProjectTitle"><h2 class="ProjectTitleText"></h2></div>
+                    <div className="ProjectTitle"><h2 class="ProjectTitleText">UNDEFINED</h2></div>
                     <div className="ProjectDescription"></div>
-                    <a className="ProjectLink" href="#" target="_blank"></a>
+                    <a className="ProjectLink" rel="noreferrer" href="www.github.com" target="_blank">t</a>
                 </div>
 
                 <div className="ProjectElement">
-                    <div className="ProjectTitle"><h2 class="ProjectTitleText"></h2></div>
+                    <div className="ProjectTitle"><h2 class="ProjectTitleText">UNDEFINED</h2></div>
                     <div className="ProjectDescription"></div>
-                    <a className="ProjectLink" href="#" target="_blank"></a>
+                    <a className="ProjectLink" rel="noreferrer" href="www.github.com" target="_blank">t</a>
                 </div>
             </div>
 
             <div className="ProjectRow">
                 <div className="ProjectElement">
-                    <div className="ProjectTitle"><h2 class="ProjectTitleText"></h2></div>
+                    <div className="ProjectTitle"><h2 class="ProjectTitleText">UNDEFINED</h2></div>
                     <div className="ProjectDescription"></div>
-                    <a className="ProjectLink" href="#" target="_blank"></a>
+                    <a className="ProjectLink" rel="noreferrer" href="www.github.com" target="_blank">t</a>
                 </div>
 
                 <div className="ProjectElement">
-                    <div className="ProjectTitle"><h2 class="ProjectTitleText"></h2></div>
+                    <div className="ProjectTitle"><h2 class="ProjectTitleText">UNDEFINED</h2></div>
                     <div className="ProjectDescription"></div>
-                    <a className="ProjectLink" href="#" target="_blank"></a>
+                    <a className="ProjectLink" rel="noreferrer" href="www.github.com" target="_blank">t</a>
                 </div>
             </div>
 

@@ -1,5 +1,6 @@
 
 import NameFlag from './NameFlag.js';
+import '../CSS/MyFooter.css';
 
 function MyFooter(){
     return(
