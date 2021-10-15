@@ -7,13 +7,14 @@ import '../CSS/TicTacToe.scss';
         return (
             <button className="square" 
             onClick={() => {
-                gameState ? props.obj[props.val] = 'X' : props.obj[props.val] = 'O' ;
+                let temp = props.obj;
+
+                gameState ? temp[props.val] = 'X' : temp[props.val] = 'O' ;
                 gameState ? gameState = false : gameState = true;
-                props.set(props.obj); console.log(props.obj);}
-            }> {       /* PROBLEM: useState ca't be set by squares[props] 
-                                                                                because of using the r ealtime function so need to useState 
-                                                                                an Array/multiple values */}
-                {props.value}
+                props.set(temp); console.log(temp);
+            }
+            }>
+                Hi
             </button>
         );
     }
@@ -21,10 +22,13 @@ import '../CSS/TicTacToe.scss';
         return <Square obj={squares} val={props} set={setter}/>;
     }
     
+    
 
     function Board() {
         
         const [squares , setSquares] = useState(Array(9).fill(""));
+
+        
 
         const status = 'Next player: X';
 
