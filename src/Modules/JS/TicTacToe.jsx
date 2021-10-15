@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import '../CSS/TicTacToe.scss';
 
+    let gameState = true;
+
     function Square(props) {
         return (
             <button className="square" 
             onClick={() => {
-                props.obj[props.val] = 'X';
-                props.set(props.obj); console.log(props.obj)}
+                gameState ? props.obj[props.val] = 'X' : props.obj[props.val] = 'O' ;
+                gameState ? gameState = false : gameState = true;
+                props.set(props.obj); console.log(props.obj);}
             }> {       /* PROBLEM: useState ca't be set by squares[props] 
                                                                                 because of using the r ealtime function so need to useState 
                                                                                 an Array/multiple values */}
