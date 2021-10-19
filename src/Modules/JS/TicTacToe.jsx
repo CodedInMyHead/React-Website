@@ -4,7 +4,7 @@ import '../CSS/TicTacToe.scss';
     let gameState = true;
     let dead = false;
     let showWinner = false;
-
+ 
     function Square(props) {
         return (
             <button className="square" 
