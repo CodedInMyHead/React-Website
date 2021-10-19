@@ -18,9 +18,6 @@ function Square(props) {
                 props.set.t = temp;
 
                 checkOver(temp);
-
-                
-
             }
         }
         }>
@@ -52,24 +49,24 @@ function getState(){
 }
 
 
-function Board(props) {
+function Board({arr, setSquares}) {
 return (
     <div>
         <div className="status">{getState()}</div>
         <div className="board-row">
-        {renderSquare(props.arr, 0, props.setSquares)}
-        {renderSquare(props.arr, 1, props.setSquares)}
-        {renderSquare(props.arr, 2, props.setSquares)}
+        {renderSquare(arr, 0, setSquares)}
+        {renderSquare(arr, 1, setSquares)}
+        {renderSquare(arr, 2, setSquares)}
         </div>
         <div className="board-row">
-        {renderSquare(props.arr, 3, props.setSquares)}
-        {renderSquare(props.arr, 4, props.setSquares)}
-        {renderSquare(props.arr, 5, props.setSquares)}
+        {renderSquare(arr, 3, setSquares)}
+        {renderSquare(arr, 4, setSquares)}
+        {renderSquare(arr, 5, setSquares)}
         </div>
         <div className="board-row">
-        {renderSquare(props.arr, 6, props.setSquares)}
-        {renderSquare(props.arr, 7, props.setSquares)}
-        {renderSquare(props.arr, 8, props.setSquares)}
+        {renderSquare(arr, 6, setSquares)}
+        {renderSquare(arr, 7, setSquares)}
+        {renderSquare(arr, 8, setSquares)}
         </div>
     </div>
     );
