@@ -31,7 +31,9 @@ function renderSquare(arr, props, setter) {
 
 function getState(){
     if(showWinner){
+        
         if(dead){
+            buttonsON(false);
             if(!gameState){
                 return 'Player 1 Won';
             } else 
@@ -81,6 +83,7 @@ const Game = () => {
         dead = false;
         showWinner = false;
         setSquares(Array(9).fill(""))
+        buttonsON(true);
     }
 
     return (
@@ -172,6 +175,13 @@ const ResetButton = ({onChange}) => {
     return(
         <button type="submit" onClick={() => onChange()}>Reset</button>
     ); 
+}
+
+const buttonsON = (p) => {
+    let buttons = document.getElementsByClassName('square');
+    for(let button of buttons) {
+        p ? button.removeAttribute('disabled'): button.setAttribute('disabled', 'true');
+    }
 }
 
 export default Game;
