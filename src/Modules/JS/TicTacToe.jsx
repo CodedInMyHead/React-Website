@@ -80,10 +80,10 @@ const Game = () => {
     const [squares , setSquares] = useState(Array(9).fill(""));
 
     function removeData() {
-        setSquares(Array(9).fill(""))
         gameState = true;
         dead = false;
         showWinner = false;
+        setSquares(Array(9).fill(""))
     }
 
     return (
