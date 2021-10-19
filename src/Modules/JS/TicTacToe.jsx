@@ -5,7 +5,7 @@ let gameState = true;
 let dead = false;
 let showWinner = false;
 
-function Square(props) {
+const Square = props => {
     return ( 
         <button className="square" 
         onClick={() => {
@@ -25,13 +25,12 @@ function Square(props) {
         </button>
     );
 }
-function renderSquare(arr, props, setter) {
+const renderSquare = (arr, props, setter) => {
     return <Square obj={arr} val={props} set={(t) => setter(t)}/>;
 }
 
-function getState(){
+const getState = () => {
     if(showWinner){
-        
         if(dead){
             buttonsON(false);
             if(!gameState){
@@ -51,7 +50,7 @@ function getState(){
 }
 
 
-function Board({arr, setSquares}) {
+const Board = ({arr, setSquares}) => {
 return (
     <div>
         <div className="status">{getState()}</div>
@@ -103,7 +102,7 @@ const Game = () => {
     );
 }
 
-function checkOver(arr){ 
+const checkOver = arr => { 
     if(checkThree(arr)){
 
     };
@@ -112,7 +111,7 @@ function checkOver(arr){
     }
 }
 
-function checkThree(arr){
+const checkThree = arr => {
     let z = 'O';
     for(let i = 0;i<7;i+=3){
         if((arr[i] === z ) && (arr[i+1] === z) && (arr[i+2] === z)){
@@ -155,7 +154,7 @@ function checkThree(arr){
     }
 }
 
-function checkAllNine(arr){
+const checkAllNine = arr => {
     var c = 0;
     for(let i = 0; i <= 8;i++){
         if(arr[i] === 'X')
