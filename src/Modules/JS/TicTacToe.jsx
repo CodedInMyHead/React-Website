@@ -1,59 +1,59 @@
 import { useState } from 'react';
 import '../CSS/TicTacToe.scss';
 
-    let gameState = true;
-    let dead = false;
-    let showWinner = false;
- 
-    function Square(props) {
-        return (
-            <button className="square" 
-            onClick={() => {
-                let temp = props.obj;
+let gameState = true;
+let dead = false;
+let showWinner = false;
 
-                if(!(temp[props.val] === 'O' || temp[props.val] === 'X')) {
-  
-                    gameState ? temp[props.val] = 'X' : temp[props.val] = 'O' ;
-                    gameState ? gameState = false : gameState = true;
-                    props.set.t = temp;
+function Square(props) {
+    return ( 
+        <button className="square" 
+        onClick={() => {
+            let temp = props.obj;
 
-                    checkOver(temp);
+            if(!(temp[props.val] === 'O' || temp[props.val] === 'X')) {
 
-                    
+                gameState ? temp[props.val] = 'X' : temp[props.val] = 'O' ;
+                gameState ? gameState = false : gameState = true;
+                props.set.t = temp;
 
-                }
-            }
-            }>
-                { props.obj[props.val] }
-            </button>
-        );
-    }
-    function renderSquare(arr, props, setter) {
-        return <Square obj={arr} val={props} set={(t) => setter(t)}/>;
-    }
-    
-    function getState(){
-        if(showWinner){
-            if(dead){
-                if(!gameState){
-                    return 'Player 1 Won';
-                } else 
-                    return 'Player 2 Won';
-            } else {
-                return 'Draw';
-            }
-        } else {
-            if(gameState){
-                return 'Next player: 1 (X)'
-            } else {
-                return 'Next player: 2 (O)'
+                checkOver(temp);
+
+                
+
             }
         }
-    }
-    
+        }>
+            { props.obj[props.val] }
+        </button>
+    );
+}
+function renderSquare(arr, props, setter) {
+    return <Square obj={arr} val={props} set={(t) => setter(t)}/>;
+}
 
-    function Board(props) {
-    return (
+function getState(){
+    if(showWinner){
+        if(dead){
+            if(!gameState){
+                return 'Player 1 Won';
+            } else 
+                return 'Player 2 Won';
+        } else {
+            return 'Draw';
+        }
+    } else {
+        if(gameState){
+            return 'Next player: 1 (X)'
+        } else {
+            return 'Next player: 2 (O)'
+        }
+    }
+}
+
+
+function Board(props) {
+return (
     <div>
         <div className="status">{getState()}</div>
         <div className="board-row">
@@ -75,9 +75,13 @@ import '../CSS/TicTacToe.scss';
     );
 }
   
-function Game() {
+const Game = () => {
 
     const [squares , setSquares] = useState(Array(9).fill(""));
+
+    function removeData() {
+        setSquares(Array(9).fill(""))
+    }
 
     return (
         <div className="game">
@@ -87,7 +91,7 @@ function Game() {
             <div className="game-info">
             <div>
                 {
-                    showWinner ? <ResetButton setSquares={setSquares} /> : <></>
+                    showWinner ? <ResetButton onChange={removeData} /> : <></>
                 }
             </div>
             <ol>{/* TODO */}</ol>
@@ -148,34 +152,26 @@ function checkThree(arr){
     }
 }
 
-    function checkAllNine(arr){
-        var c = 0;
-        for(let i = 0; i <= 8;i++){
-            if(arr[i] === 'X')
-                c++;
-            if(arr[i] === 'O')
-                c++;
-        }
-        if(c === 9){     
-            showWinner = true;
-            return true;
-        } else {
-            return false;
-        }
+function checkAllNine(arr){
+    var c = 0;
+    for(let i = 0; i <= 8;i++){
+        if(arr[i] === 'X')
+            c++;
+        if(arr[i] === 'O')
+            c++;
     }
+    if(c === 9){     
+        showWinner = true;
+        return true;
+    } else {
+        return false;
+    }
+}
 
-    function ResetButton(setSquares){
-        return(
-            <button type="submit" onClick={() => reset((s) => setSquares(s))}>Reset</button>
-        );
-    }
-
-    function reset(s){
-        console.log(s);
-        gameState = true;
-        dead = false;
-        showWinner = false;
-        s = Array(9).fill("");
-    }
+const ResetButton = ({onChange}) => {
+    return(
+        <button type="submit" onClick={() => onChange()}>Reset</button>
+    ); 
+}
 
 export default Game;
