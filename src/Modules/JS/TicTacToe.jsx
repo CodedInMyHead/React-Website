@@ -81,6 +81,9 @@ const Game = () => {
 
     function removeData() {
         setSquares(Array(9).fill(""))
+        gameState = true;
+        dead = false;
+        showWinner = false;
     }
 
     return (
