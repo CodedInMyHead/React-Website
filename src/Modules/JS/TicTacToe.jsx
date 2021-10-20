@@ -52,24 +52,20 @@ const getState = () => {
 
 const Board = ({arr, setSquares}) => {
 return (
-    <div>
+    <>
         <div className="status">{getState()}</div>
-        <div className="board-row">
-        {renderSquare(arr, 0, setSquares)}
-        {renderSquare(arr, 1, setSquares)}
-        {renderSquare(arr, 2, setSquares)}
+        <div className="board">
+            {renderSquare(arr, 0, setSquares)}
+            {renderSquare(arr, 1, setSquares)}
+            {renderSquare(arr, 2, setSquares)}
+            {renderSquare(arr, 3, setSquares)}
+            {renderSquare(arr, 4, setSquares)}
+            {renderSquare(arr, 5, setSquares)}
+            {renderSquare(arr, 6, setSquares)}
+            {renderSquare(arr, 7, setSquares)}
+            {renderSquare(arr, 8, setSquares)}
         </div>
-        <div className="board-row">
-        {renderSquare(arr, 3, setSquares)}
-        {renderSquare(arr, 4, setSquares)}
-        {renderSquare(arr, 5, setSquares)}
-        </div>
-        <div className="board-row">
-        {renderSquare(arr, 6, setSquares)}
-        {renderSquare(arr, 7, setSquares)}
-        {renderSquare(arr, 8, setSquares)}
-        </div>
-    </div>
+    </>
     );
 }
   
