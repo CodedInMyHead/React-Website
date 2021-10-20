@@ -11,4 +11,5 @@ function reDraw(){
     document.getElementById('root')
   );
 }
+
 setInterval(reDraw, 100);

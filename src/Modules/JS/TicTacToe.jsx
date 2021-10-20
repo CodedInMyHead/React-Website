@@ -5,23 +5,22 @@ let gameState = true;
 let dead = false;
 let showWinner = false;
 
-const Square = props => {
+const Square = ({obj, val}) => {
     return ( 
         <button className="square" 
         onClick={() => {
-            let temp = props.obj;
+            let temp = obj;
 
-            if(!(temp[props.val] === 'O' || temp[props.val] === 'X')) {
+            if(!(temp[val] === 'O' || temp[val] === 'X')) {
 
-                gameState ? temp[props.val] = 'X' : temp[props.val] = 'O' ;
+                gameState ? temp[val] = 'X' : temp[val] = 'O' ;
                 gameState ? gameState = false : gameState = true;
-                props.set.t = temp;
 
                 checkOver(temp);
             }
         }
         }>
-            { props.obj[props.val] }
+            { obj[val] }
         </button>
     );
 }
